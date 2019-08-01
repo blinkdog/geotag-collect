@@ -1,0 +1,43 @@
+{
+    "name": "geotag-collect",
+    "version": "0.0.1",
+    "description": "Small web service to collect geotagged metadata",
+    "keywords": [
+        "data",
+        "geo",
+        "location",
+        "metadata",
+        "service",
+        "tag",
+        "web"
+    ],
+    "homepage": "https://github.com/blinkdog/geotag-collect",
+    "bugs": "https://github.com/blinkdog/geotag-collect/issues",
+    "license": "AGPL-3.0-or-later",
+    "author": "Patrick Meade <blinkdog@protonmail.com>",
+    "files": [
+        "CHANGELOG.md",
+        "index.js",
+        "lib",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ],
+    "main": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/blinkdog/geotag-collect.git"
+    },
+    "dependencies": {
+        "express": "4.17.1",
+        "mongoose": "5.6.7",
+        "pug": "2.0.4",
+        "stylus": "0.54.5"
+    },
+    "devDependencies": {
+        "coffeescript": "2.4.1",
+        "mocha": "6.2.0",
+        "nyc": "14.1.1",
+        "should": "13.2.3"
+    }
+}
