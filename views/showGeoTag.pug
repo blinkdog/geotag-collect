@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Submitted GeoTag
+        style.
+            // h1 { text-align: center; }
+            .error { color: #ff0000; }
+            input { color: #000000; }
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+    body
+        h1 Wizards Unite!
+        if errorMessage
+            h2.error= errorMessage
+        h2 GeoTag
+        p= timestamp
+        p= tagType
+        p (#{latitude}, #{longitude}) -
+            a(href="https://www.openstreetmap.org/?mlat=" + latitude + "&mlon=" + longitude + "#map=18/" + latitude + "/" + longitude) OSM

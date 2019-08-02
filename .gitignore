@@ -61,5 +61,7 @@ typings/
 .next
 
 # geotag-collect project specific excludes
+/cert.pem
+/key.pem
 /lib
 /test

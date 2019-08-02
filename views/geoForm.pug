@@ -1,0 +1,70 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Submit GeoTag
+        style.
+            // h1 { text-align: center; }
+            .error { color: #ff0000; }
+            input { color: #000000; }
+            body, input {
+                font-size: 20px;
+            }
+            input[type=submit] {
+                font-size: 2em;
+            }
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+        script
+          //- embed: geolocation.js
+          include ../lib/geolocation.js
+    body
+        h1 GeoTag
+        if errorMessage
+            h2.error= errorMessage
+        .geo-form
+            form(method='POST' action='/wu-geotag')
+                div.form-group
+                    // label(for='type') Type:
+                    select(name='type')
+                        option(value="Area-Care of Magical Creatures") Area - Care of Magical Creatures
+                        option(value="Area-Dark Arts") Area - Dark Arts
+                        option(value="Area-Hogwarts School") Area - Hogwarts School
+                        option(value="Area-Legends of Hogwarts") Area - Legends of Hogwarts
+                        option(value="Area-Ministry of Magic") Area - Ministry of Magic
+                        option(value="Area-Magizoology") Area - Magizoology
+                        option(value="Area-Magical Games and Sports") Area - Magical Games and Sports
+                        option(value="Area-Mysterious Artefacts") Area - Mysterious Artefacts
+                        option(value="Area-Wonders of the Wizarding World") Area - Wonders of the Wizarding World
+                        option(value="Area-Oddities") Area - Oddities
+                        option(value="Flag-Care of Magical Creatures") Flag - Care of Magical Creatures
+                        option(value="Flag-Dark Arts") Flag - Dark Arts
+                        option(value="Flag-Hogwarts School") Flag - Hogwarts School
+                        option(value="Flag-Legends of Hogwarts") Flag - Legends of Hogwarts
+                        option(value="Flag-Ministry of Magic") Flag - Ministry of Magic
+                        option(value="Flag-Magizoology") Flag - Magizoology
+                        option(value="Flag-Magical Games and Sports") Flag - Magical Games and Sports
+                        option(value="Flag-Mysterious Artefacts") Flag - Mysterious Artefacts
+                        option(value="Flag-Wonders of the Wizarding World") Flag - Wonders of the Wizarding World
+                        option(value="Flag-Oddities") Flag - Oddities
+                        option(value="Fortress") Fortress
+                        option(value="Greenhouse") Greenhouse
+                        option(value="Inn-Blue") Inn - Blue
+                        option(value="Inn-Brown") Inn - Brown
+                        option(value="Inn-Green") Inn - Green
+                        option(value="Inn-Pink") Inn - Pink
+                        option(value="Inn-Purple") Inn - Purple
+                        option(value="ZZZ-Testing") Just Testing
+                // div.form-group
+                //     button.btn.btn-primary(type='button', onclick="window.updatePosition()") Update Position
+                // div.form-group
+                //     label(for='latitude') Latitude:
+                //     input#latitude.form-control(type='text', name='latitude', value="")
+                // div.form-group
+                //     label(for='longitude') Longitude:
+                //     input#longitude.form-control(type='text', name='longitude', value="")
+                div.form-group
+                    input#latitude(type='hidden', name='latitude', value="")
+                    input#longitude(type='hidden', name='longitude', value="")
+                br
+                br
+                input.btn.btn-primary(type='submit', value="Submit", disabled)
